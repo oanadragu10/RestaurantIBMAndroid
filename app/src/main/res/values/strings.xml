@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RestaurantsIBMAndroid</string>
+    <string name="title">The Clink Restaurant</string>
+    <string name="subtitle">The first Clink Restaurant opened in 2009 at HMP High Down in Surrey.</string>
+</resources>
