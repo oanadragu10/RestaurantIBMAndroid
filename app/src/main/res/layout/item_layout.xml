@@ -4,44 +4,45 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:minHeight="@dimen/minHeight"
-    tools:context=".restaurant.RestaurantsActivity">
+    android:minHeight="@dimen/minHeight">
 
-    <ImageView
-        android:id="@+id/list_item_icon"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image"
         android:layout_width="@dimen/list_item_icon_size"
         android:layout_height="@dimen/list_item_icon_size"
         android:padding="@dimen/padding_16"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_restaurant_black_24dp"
-        app:layout_constraintEnd_toStartOf="@id/list_item_text"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintEnd_toStartOf="@id/title"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/list_item_text"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingStart="@dimen/padding_16"
         android:paddingTop="@dimen/padding_16"
         android:paddingEnd="@dimen/padding_16"
-        android:text="@string/title"
+        android:text="@string/item_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintBottom_toTopOf="@+id/list_item_secondary_text"
-        app:layout_constraintStart_toEndOf="@+id/list_item_icon"
+        app:layout_constraintBottom_toTopOf="@+id/subtitle"
+        app:layout_constraintStart_toEndOf="@+id/image"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        android:maxLines="2"/>
 
-    <TextView
-        android:id="@+id/list_item_secondary_text"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingStart="@dimen/padding_16"
         android:paddingEnd="@dimen/padding_16"
-        android:text="@string/subtitle"
+        android:text="@string/item_subtitle"
         android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-        app:layout_constraintTop_toBottomOf="@+id/list_item_text"
-        app:layout_constraintStart_toEndOf="@+id/list_item_icon"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        android:maxLines="2"
+        android:textColor="@color/grey"
         />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
